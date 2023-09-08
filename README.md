@@ -37,3 +37,27 @@ Question 1: Which establishments have a hygiene score equal to 20?
   3. The first result is printed using pprint
   4. The results are converted to a Pandas DataFrame and displays the first 10 rows 
           
+Question 2: Which establishments in London have a RatingValue greater than or equal to 4?
+   1. A query is correctly performed to find the establishments in London with a RatingValue greater than or equal to 4
+   2. The query uses the $regex operator to locate the London establishments
+   3. count_documents() is used to list the correct number of documents
+   4. The first result is printed using pprint
+   5. The results are converted to a Pandas DataFrame and displays the first 10 rows
+
+Question 3: What are the top 5 establishments with a RatingValue of 5, sorted by lowest hygiene score, nearest to the new restaurant added, "Penang Flavours"? 
+   1. A query is correctly performed to find the establishments within 0.01 degree of the "Penang Flavours" restaurant
+   2. The query also limits the results to establishments with a RatingValue of 5
+   3. The query uses the sort() method in PyMongo to sort in ascending order on the hygiene score
+   4. The query uses the limit() method in PyMongo to limit the results to 5
+   5. All five results are printed using pprint
+   6. The results are converted to a Pandas DataFrame and displayed
+
+Question 4: How many establishments in each Local Authority area have a hygiene score of 0? Sort the results from highest to lowest, and print out the top ten local authority areas.
+   1. An aggregation pipeline is built to include a match query, group, and sort
+   2. The match query matches documents with a hygiene score of 0
+   3. The group step of the pipeline is grouped on LocalAuthorityName and counts the number of documents
+   4. The sort step of the pipeline sorts the count of the documents in descending order
+   5. The aggregation pipeline is correctly sent to the aggregate
+   6. The results from the aggregation query is cast as a list and then saved to a variable
+   7. The first ten results are printed using pprint (
+   8. The results are converted to a Pandas DataFrame and displays the first 10 rows 
